@@ -7,8 +7,8 @@ The communication between the two programs was implemented through Socket, in py
 
 Install Python version 3.6.4;
 Open two instances of the CLI that best suits your like in the directory where the .py files are located;
-Run the command py. \ Field_mino_server.py;
-Run the command py. \ Field_minado_cliente.py
+Run the command py. \campo_minado_servidor.py;
+Run the command py. \campo_minado_cliente.py
 
 # Implementação do campo minado em python, comunicação via socket
 
