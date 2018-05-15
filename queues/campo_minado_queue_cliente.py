@@ -3,6 +3,7 @@ from string import ascii_lowercase
 from socket import socket, AF_INET, SOCK_DGRAM
 import os
 import json
+import zmq
 
 PORT = 5559
 
@@ -19,7 +20,7 @@ def cliente():
     requisicao = json.dumps({"acao": MOSTRAR_PAINEL})
 
     socketInstancia = context.socket(zmq.REQ)
-    socketInstancia = context.connect("tcp://localhost:%s" % PORT)
+    socketInstancia.connect("tcp://localhost:%s" % PORT)
 
     socketInstancia.send(requisicao.encode())
     data = socketInstancia.recv()
