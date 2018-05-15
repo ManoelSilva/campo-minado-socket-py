@@ -19,7 +19,7 @@ class CampoMinadoClient:
         resposta = self.conn.painel()
         resposta = json.loads(resposta)
 
-        os.system('clear')
+        os.system('cls')
         self.showPainel(resposta.get("painel"))
 
         gameOn = True
@@ -35,10 +35,10 @@ class CampoMinadoClient:
             resposta = json.loads(resposta)
 
             if resposta.get('acao') == "CONTINUA":
-                os.system('clear')
+                os.system('cls')
                 self.showPainel(resposta.get("painel"))
             elif resposta.get('acao') == "GAME OVER":
-                os.system('clear')
+                os.system('cls')
                 self.showPainel(resposta.get("painel"))
                 print(resposta.get("mensagem"))
                 gameOn = False
